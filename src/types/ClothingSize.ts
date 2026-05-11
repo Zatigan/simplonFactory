@@ -1,4 +1,4 @@
-enum ClothingSize {
+export enum ClothingSize {
  XS,
  S,
  M,
