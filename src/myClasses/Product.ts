@@ -1,4 +1,4 @@
-abstract class Product {
+export abstract class Product {
  productId: number;
  name: string;
  weight: number;
