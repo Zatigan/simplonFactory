@@ -35,7 +35,7 @@ export class Order {
   this.productsList = this.productsList.filter(clothe => (clothe.productId != productId));
  };
 
- calculateWeight() {
+ calculateWeight(): number {
   let totalWeight = 0;
 
   this.productsList.map((clothe) => totalWeight += clothe.weight);
@@ -43,7 +43,13 @@ export class Order {
   return totalWeight;
  };
 
- // calculateTotal() {};
+ calculateTotal(): number {
+  let invoice = 0;
+
+  this.productsList.map((clothe) => invoice += clothe.price)
+
+  return parseFloat(invoice.toFixed(2));
+ };
 
  // displayOrder() {};
 
