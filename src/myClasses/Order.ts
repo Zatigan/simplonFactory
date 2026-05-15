@@ -48,13 +48,13 @@ export class Order {
   let invoice = 0;
   // Je parcours le tableau et pour chaque article, j'ajoute son poids à la variable du total de la facture
   this.productsList.map((clothe) => invoice += clothe.price)
-  
+
   // J'utilise un parseFloat pour limiter mon retour à 2 chiffres après la virgule
   return parseFloat(invoice.toFixed(2));
  };
 
- displayOrder() {
-
+ displayOrder(): String {
+  return `====== Informations client ======\n - ${this.customer.displayInfo()}, \n====== Liste des produits ====== ${this.productsList.map((clothe) => `\n - ${clothe.displayDetails()}`)}, \n====== Prix total ======  \n - ${this.calculateTotal()}€`;
  };
 
 }
