@@ -10,6 +10,6 @@ export class Customer {
  }
 
  displayInfo(): string {
-  return `Customer ID: ${this.customerId}, Name: ${this.name}, Email: ${this.email} `;
+  return `Customer ID: ${this.customerId}, Name: ${this.name}, Email: ${this.email}`;
  }
 }

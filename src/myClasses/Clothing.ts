@@ -1,6 +1,7 @@
 import type { ClothingSize } from "../types/ClothingSize.js";
 import { Product } from "./Product.js";
 
+
 export class Clothing extends Product {
  size: ClothingSize;
 
