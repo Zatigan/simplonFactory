@@ -1,5 +1,3 @@
-import { ClothingSize } from "../types/ClothingSize.js";
-import { Clothing } from "./Clothing.js";
 import { Customer } from "./Customer.js";
 import type { Product } from "./Product.js";
 
