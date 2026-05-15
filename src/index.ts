@@ -18,4 +18,4 @@ gegeOrder.calculateWeight();
 gegeOrder.addProduct(new Clothing(25, "armure de plaque", 50, 250, ClothingSize.XL));
 // gegeOrder.calculateWeight();
 gegeOrder.calculateTotal();
-console.log(gegeOrder.calculateTotal());
+// console.log(gegeOrder.calculateTotal());
