@@ -17,14 +17,23 @@ export class Order {
  };
 
  addProduct(product: Product): void {
-  if(!product) {
+  // Si le produit n'existe pas, sait-on jamais
+  if (!product) {
    throw new Error("Produit invalide");
   }
 
+  // Je mets à jour la liste de produit en déversant la liste initiale et en ajoutant le nouveau produit
   this.productsList = [...this.productsList, product];
  };
 
- // removeProduct(productId: number) {};
+ removeProduct(productId: number): void {
+  // Si la référence produit est fausse
+  if (typeof productId !== "number") {
+   throw new Error("Référence produit invalide")
+  }
+
+  this.productsList = this.productsList.filter(clothe => (clothe.productId != productId));
+ };
 
  // calculateWeight() {};
 
