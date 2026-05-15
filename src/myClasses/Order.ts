@@ -27,7 +27,7 @@ export class Order {
  };
 
  removeProduct(productId: number): void {
-  // Si la référence produit est fausse
+  // Si la référence produit n'est pas un nombre
   if (typeof productId !== "number") {
    throw new Error("Référence produit invalide")
   }
@@ -35,7 +35,13 @@ export class Order {
   this.productsList = this.productsList.filter(clothe => (clothe.productId != productId));
  };
 
- // calculateWeight() {};
+ calculateWeight() {
+  let totalWeight = 0;
+
+  this.productsList.map((clothe) => totalWeight += clothe.weight);
+
+  return totalWeight;
+ };
 
  // calculateTotal() {};
 
